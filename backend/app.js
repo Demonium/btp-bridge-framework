@@ -43,24 +43,24 @@ const SystemRouter = require("./router/SystemRouter");
 app.use("/gateway", SystemRouter);
 
 // Notification endpoint
-const NotificationRouter = require("./router/NotificationRouter");
-app.use("/notify", NotificationRouter);
+// const NotificationRouter = require("./router/NotificationRouter");
+// app.use("/notify", NotificationRouter);
 
 // MS Teams Bot
-const path = require("path");
-const ENV_FILE = path.join(__dirname, ".env");
-require("dotenv").config({ path: ENV_FILE });
-const botActivityHandler = require("./bots/MS365/botActivityHandler");
-const botAdapter = require("./bots/MS365/botAdapter");
-app.post("/api/messages", (req, res) => {
-  botAdapter.processActivity(req, res, async (context) => {
-    await botActivityHandler.run(context);
-  });
-});
+// const path = require("path");
+// const ENV_FILE = path.join(__dirname, ".env");
+// require("dotenv").config({ path: ENV_FILE });
+// const botActivityHandler = require("./bots/MS365/botActivityHandler");
+// const botAdapter = require("./bots/MS365/botAdapter");
+// app.post("/api/messages", (req, res) => {
+//   botAdapter.processActivity(req, res, async (context) => {
+//     await botActivityHandler.run(context);
+//   });
+// });
 
 // Google Chat Bot
-const GoogleChatBotHandler = require("./bots/GoogleWS/GoogleChatBotHandler");
-app.use("/googleChat", GoogleChatBotHandler);
+// const GoogleChatBotHandler = require("./bots/GoogleWS/GoogleChatBotHandler");
+// app.use("/googleChat", GoogleChatBotHandler);
 
 // Server port
 app.listen(port, () => {

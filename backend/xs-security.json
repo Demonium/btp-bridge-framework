@@ -7,20 +7,20 @@
       "description": "display"
     }
   ],
-  "role-templates": [
-    {
-      "name": "Viewer",
-      "description": "Required to read data",
-      "scope-references": ["$XSAPPNAME.Display"],
-      "attribute-references": [
-        "givenname",
-        "surname",
-        "emailaddress",
-        "name",
-        "country"
-      ]
-    }
-  ],
+  // "role-templates": [
+  //   {
+  //     "name": "Viewer",
+  //     "description": "Required to read data",
+  //     "scope-references": ["$XSAPPNAME.Display"],
+  //     "attribute-references": [
+  //       "givenname",
+  //       "surname",
+  //       "emailaddress",
+  //       "name",
+  //       "country"
+  //     ]
+  //   }
+  // ],
   "attributes": [
     {
       "name": "givenname",
