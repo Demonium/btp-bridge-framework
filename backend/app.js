@@ -34,9 +34,9 @@ app.get("/", (req, res) => {
 });
 
 // Transcript Endpoint
-global.transcriptsDictionary = [];
-const TranscriptRouter = require("./router/TranscriptRouter");
-app.use("/transcript", TranscriptRouter);
+// global.transcriptsDictionary = [];
+// const TranscriptRouter = require("./router/TranscriptRouter");
+// app.use("/transcript", TranscriptRouter);
 
 // System gateway
 const SystemRouter = require("./router/SystemRouter");
